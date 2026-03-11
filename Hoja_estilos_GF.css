@@ -322,7 +322,7 @@ iframe{
     color: #444;
 }
 
-#textohover{
+#textoHover{
     position: absolute;
     display: none;
     background-color: black;
