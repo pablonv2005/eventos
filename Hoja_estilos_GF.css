@@ -1,8 +1,15 @@
-    /*Para que el menú no se corte por la derecha*/
+   
+   /* PARTE DE TODOS LOS ARCHIVOS CSS PARA QUE SE APLIQUEN EN TODAS LAS PÁGINAS */
+   
+   
+   /*Para que el menú no se corte por la derecha*/
 *{
     box-sizing: border-box;
 }
 :root{
+    /*fondo de la página de inicio*/
+    --fondo-inicio: url(Fotos/FondoInicio.webp);
+    /*Tipos de fuente*/
     --fuente-principal: Arial, Helvetica, sans-serif;
     --fuente-titulos: "Times New Roman", serif;
     /*color de letra de la cabecera*/
@@ -107,16 +114,65 @@ header{
     color: var(--color-letra-hr);
 }
 
+header h2 {
+    color: var(--color-letra-hr);
+    margin-bottom: 0;
+}
+
 .sub{
     color: var(--color-letra-p);
     font-size: 0.5em;
     font-family: var(--fuente-principal);
 }
 
+p{
+    text-indent: 1rem;
+}
+
+/*Parte de Tania*/
+
+.portada{
+    background: var(--fondo-inicio);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.arriba{
+    background-color: var(--color-letra-s);
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.abajo{
+    color: var(--color-letra-p);
+    font-size: 0.5em;
+    font-family: var(--fuente-principal);
+    text-align: var(--posicion-t);
+    margin-top: 0;
+    background-color: var(--color-letra-s);
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
 main{
     text-align: var(--posicion-p);
     font-family: var(--fuente-principal);
     color: var(--color-letra-p)
+}
+
+.inicio-main{
+    background-color: var(--color-letra-s);
+    margin-right: 20rem;
+    margin-left: 20rem;
+}
+
+.titulos-inicio{
+    font-family: var(--fuente-titulos);
 }
 
 .secciones{
@@ -139,12 +195,74 @@ h2{
     color: var(--color-letra-t);
 }
 
-img{
+.galeria{
+    max-width:800px;
+    margin:0 auto;
+    background:var(--color-letra-s);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.principal{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.img-principal{
+    width:100%;
+    max-height:400px;
+    object-fit:contain;
+    border-radius:10px;
     border: 3px solid var(--color-letra-hr); 
-    display: block; 
-    margin: auto; 
-    width: 30%;
-    height: 300px;
+}
+
+.miniaturas{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-top:10px;
+}
+
+.miniaturas img{
+    width:120px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+    cursor:pointer;
+    opacity:0.7;
+    border:2px solid transparent;
+    transition:opacity .2s, border-color .2s;
+}
+
+.miniaturas img:hover{
+    opacity:1;
+}
+
+.miniaturas img.activa{
+    opacity:1;
+    border-color:var(--color-letra-t);
+}
+
+.controles{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:15px;
+}
+
+.controles button{
+    padding:10px 20px;
+    border:none;
+    background:var(--color-letra-hr);
+    color:var(--color-letra-s);
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer; 
+}
+
+.controles button:hover{
+    background:var(--color-letra-t);
 }
 
 iframe{
@@ -154,6 +272,8 @@ iframe{
     width: 50%;
     height: 400px;
 }
+
+/*Parte de Pablo*/
 
 .contenedorEvento{
     display:flex;
@@ -200,4 +320,176 @@ iframe{
 .descripcionEvento{
     line-height: 1.6;
     color: #444;
+}
+
+#textohover{
+    position: absolute;
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 0.4em, 0.7em;
+    border-radius: 15%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* PARTE DE BACHIR */
+
+.Historia{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Historia_card{
+    display:flex;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow:hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.Historia_texto{
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Historia_minitit{
+    font-weight: bold;
+    color: #ff6a5c;
+    font-size:1.2rem;
+}
+.Historia_card img{
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+.Historia p{
+    margin-top: 10px;
+    font-size:1.1rem;
+}
+.Historia_I:nth-child(even) .Historia_card{
+    flex-direction: row-reverse;
+}
+.Historia_I{
+    margin-bottom: 25px;
+}
+.Historia_I p{
+    margin-top: 10px;
+    font-size:1.1rem;
+}
+.Actos{
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+.Actos h2{
+  margin: 20px auto;
+  max-width: 700px;
+  font-size:1.1rem;
+}
+.Actos_I{
+    display:flex;
+    gap: 20px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.Acto_card{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 25px 20px;
+    transition: transform 0.3s ease;
+}
+.Acto_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.Acto_card h3{
+    margin-bottom: 15px;
+    color: var(--color-letra-hr);
+    font-size: 1.1rem;
+}
+
+.Acto_card img{
+    width:100%;
+    height:150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+h1 {
+    background-image: url('img/fondo_titulo.jpg');
+    padding: 40px 20px;
+    text-align: center;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat      
+} 
+
+#contenedor-puzle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#tablero {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+    border: 5px solid #8b1538; 
+    background-color: #eee;
+}
+
+.hueco {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #ccc;
+    box-sizing: border-box;
+}
+
+#piezas-sueltas {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pieza {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    cursor: grab;
+    background-size: 200px 200px;
+}
+
+
+#p1 { background-image: url('img/arribaizqq.png'); }
+#p2 { background-image: url('img/arribadcha.png'); }
+#p3 { background-image: url('img/abajoizq.png'); }
+#p4 { background-image: url('img/abajodcha.png'); }
+
+.encajada {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    cursor: default;
+}
+footer{
+    background-color: var(--color-letra-hr);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top:50px;
 }
