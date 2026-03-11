@@ -9,7 +9,7 @@ imagenes.forEach(imagen=> {
     texto.style.display= "none";
    });
    imagen.addEventListener("mousemove", (e)=> {
-    texto.style.left= e.pageX + "px";
+    texto.style.left= (e.pageX + 15) + "px";
         texto.style.top= e.pageY + "px";
 
    });
